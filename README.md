@@ -11,14 +11,15 @@ json 数据结构如下
   "knowledge_points" : [
     {
       "id" : randstr,
-      "name" : stringxxx
+      "name" : stringxxx,
+      "desc" : stringxxx
     },
     ...
   ],
   "links" : [
     {
-      "parent_id" : knowledge_point.id,
-      "child_id"  : knowledge_point.id
+      "parent" : knowledge_point.id,
+      "child"  : knowledge_point.id
     },
     ...
   ]
