@@ -24,3 +24,19 @@ json 数据结构如下
   ]
 }
 ```
+
+## 数据生成方式
+
+js.graphml 是 yed 工具编辑的文件
+
+生成数据的步骤<br>
+1 把用 yed 编辑好的 js.graphml 放到工程目录
+2 运行
+```
+  ruby build_json.rb
+  #"1 js"
+  #"2 art"
+  #"select(1/2):"
+  #1
+  #会生成 js/js.json 文件
+```
