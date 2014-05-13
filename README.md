@@ -30,7 +30,7 @@ json 数据结构如下
 js.graphml 是 yed 工具编辑的文件
 
 生成数据的步骤<br>
-1 把用 yed 编辑好的 js.graphml 放到工程目录
+1 把用 yed 编辑好的 js.graphml 放到工程目录<br>
 2 运行
 ```
   ruby build_json.rb
