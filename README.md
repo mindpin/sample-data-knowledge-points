@@ -6,7 +6,7 @@ sample-data-knowledge-points
 ## 知识点网络结构
 
 json 数据结构如下
-```json
+```javascript
 {
   "knowledge_points" : [
     {
