@@ -6,19 +6,19 @@ sample-data-knowledge-points
 ## 知识点网络结构
 
 json 数据结构如下
-```javascript
+```json
 {
-  knowledge_points : [
+  "knowledge_points" : [
     {
-      id : randstr,
-      name : stringxxx
+      "id" : randstr,
+      "name" : stringxxx
     },
     ...
   ],
-  links : [
+  "links" : [
     {
-      parent_id : knowledge_point.id,
-      child_id  : knowledge_point.id
+      "parent_id" : knowledge_point.id,
+      "child_id"  : knowledge_point.id
     },
     ...
   ]
