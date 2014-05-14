@@ -8,7 +8,7 @@ sample-data-knowledge-points
 json 数据结构如下
 ```javascript
 {
-  "knowledge_points" : [
+  "points" : [
     {
       "id" : randstr,
       "name" : stringxxx,
@@ -16,7 +16,7 @@ json 数据结构如下
     },
     ...
   ],
-  "links" : [
+  "edges" : [
     {
       "parent" : knowledge_point.id,
       "child"  : knowledge_point.id
