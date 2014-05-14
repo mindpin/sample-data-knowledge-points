@@ -27,23 +27,24 @@ class KnowledgeXmlParser
 
   private
     def _build_hash
-      knowledge_points = nodes.map do |node_dom|
+      points_arr = nodes.map do |node_dom|
         {
           :id => node_dom["id"], 
-          :name => node_dom.at_css('y|NodeLabel').children.first
+          :name => node_dom.at_css('y|NodeLabel').children.first,
+          :desc => ""
         }
       end
 
-      links = edges.map do |link|
+      edges_arr = edges.map do |link|
         {
-          :parent_id => link["source"],
-          :child_id  => link["target"]
+          :parent => link["source"],
+          :child  => link["target"]
         }
       end
 
       {
-        :knowledge_points => knowledge_points,
-        :links => links
+        :points => points_arr,
+        :edges => edges_arr
       }
     end
 
