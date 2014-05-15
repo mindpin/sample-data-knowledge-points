@@ -31,7 +31,7 @@ class KnowledgeXmlParser
         {
           :id => node_dom["id"], 
           :name => node_dom.at_css('y|NodeLabel').children.first,
-          :desc => ""
+          :desc => node_dom.at_css('data[key=d5]').text
         }
       end
 
