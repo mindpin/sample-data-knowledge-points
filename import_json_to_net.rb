@@ -10,11 +10,11 @@ while !argv_is_correct
 end
 
 if index == "1"
-  input_file_path = "js/js.json"
+  input_file_path = "../js/js.json"
   net_name = "Javascript"
   net_desc = "Javascript 的基础知识"
 elsif index == "2"
-  input_file_path = "art/art.json"
+  input_file_path = "../art/art.json"
   net_name = "绘画"
   net_desc = "绘画的基础知识"
 end
@@ -24,6 +24,6 @@ if !net.blank?
   net.destroy
 end
 
-json = IO.read(input_file_path)
+json = IO.read(File.expand_path(input_file_path, __FILE__))
 KnowledgeNetStore::Net.from_json(net_name, net_desc, json)
 p "import success!!"
