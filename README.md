@@ -41,3 +41,10 @@ js.graphml 是 yed 工具编辑的文件
   #1
   #会生成 js/js.json 文件
 ```
+
+
+## 数据使用方法
+
+1 把 git://github.com/mindpin/sample-data-knowledge-points.git 引入 knowledge-camp 工程的 script/data 路径
+
+2 rails r script/data/import_json_to_net.rb 导入数据（导入net时，如果发现已经存在同名net会把数据库中的先删除，然后导入新的）
