@@ -1,5 +1,5 @@
 require 'fileutils'
-require './knowledge_xml_parser'
+require File.expand_path('./knowledge_xml_parser', __FILE__)
 
 input_file_path = ARGV[0]
 
