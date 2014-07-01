@@ -1,7 +1,10 @@
 
 input_file_path = ARGV[0]
 
-json_file_path = `ruby _import_graphml_to_json.rb #{input_file_path}`
+tojson = File.expand_path("../_import_graphml_to_json.rb", __FILE__)
+
+
+json_file_path = `ruby #{tojson} #{input_file_path}`
 
 net_name = File.basename(input_file_path,".graphml")
 net_desc = net_name
