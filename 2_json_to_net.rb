@@ -7,6 +7,6 @@ if !net.blank?
   net.destroy
 end
 
-json = IO.read(File.expand_path(input_file_path, __FILE__))
+json = IO.read(input_file_path)
 KnowledgeNetStore::Net.from_json(net_name, net_desc, json)
 p "import success!!"
