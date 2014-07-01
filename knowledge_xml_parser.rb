@@ -41,6 +41,8 @@ class KnowledgeXmlParser
           :parent => link["source"],
           :child  => link["target"]
         }
+      end.select do |pc|
+        pc[:parent] != pc[:child]
       end
 
       {
