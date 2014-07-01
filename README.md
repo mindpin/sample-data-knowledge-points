@@ -83,3 +83,11 @@ rails r sample-data/knowledge-points/import_json_to_net.rb
   #选择1会把 js/js.json 的数据导入到 mongoid 数据库
   #选择2会把 art/art.json 的数据导入到 mongoid 数据库
 ```
+
+### 导入临时测试数据
+rails 工程根目录依次运行
+```
+ruby sample-data/knowledge-points/1_graphml_to_json.rb <graphml_file_path> <json_file_path>
+
+rails r sample-data/knowledge-points/2_json_to_net.rb <json_file_path> <net_name>
+```
