@@ -27,10 +27,12 @@ class KnowledgeXmlParser
   private
     def _build_hash
       points_arr = nodes.map do |node_dom|
+        desc_dom = node_dom.at_css('data[key=d5]')
+        desc = desc_dom.blank? ? "" : desc.text
         {
           :id => node_dom["id"], 
           :name => node_dom.at_css('y|NodeLabel').children.first,
-          :desc => node_dom.at_css('data[key=d5]').text
+          :desc => desc
         }
       end
 
