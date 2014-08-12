@@ -85,9 +85,22 @@ rails r sample-data/knowledge-points/import_json_to_net.rb
 ```
 
 ### 导入临时测试数据
-rails 工程根目录依次运行
+通过以下两个脚本可以导入测试数据，以下分别说明其作用：
+
+脚本一：将 yed 软件生成的 graphml 文件转换成特定格式的 json 文件
 ```
 ruby sample-data/knowledge-points/1_graphml_to_json.rb <graphml_file_path> <json_file_path>
+```
 
+`graphml_file_path`: 要转换的 graphml 文件的路径<br/>
+`json_file_path`: 转换结果输出到的 json 文件的路径
+
+
+
+脚本二：将特定格式的 json 文件导入到工程的数据库中，创建出 Net 和 Point 对象。
+```
 rails r sample-data/knowledge-points/2_json_to_net.rb <json_file_path> <net_name>
 ```
+
+`json_file_path`: 要导入的 json 文件的路径<br/>
+`net_name`: 导入后，Net 对象的 name 值
